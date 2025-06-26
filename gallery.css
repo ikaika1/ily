@@ -49,6 +49,61 @@
   font-size: 1rem;
 }
 
+/* Mobile Menu Styles */
+.u-mobile-menu {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  min-width: 200px;
+}
+
+.u-mobile-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.u-mobile-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  color: #478ac9 !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(71, 138, 201, 0.1);
+}
+
+.u-mobile-menu-item:last-child {
+  border-bottom: none;
+  border-radius: 0 0 15px 15px;
+}
+
+.u-mobile-menu-item:first-child {
+  border-radius: 15px 15px 0 0;
+}
+
+.u-mobile-menu-item:hover {
+  background: rgba(71, 138, 201, 0.1);
+  color: #2c5282 !important;
+}
+
+.u-hamburger-btn {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: none;
+  cursor: pointer;
+}
+
 .u-text-1 {
   font-size: 3rem;
   font-weight: 700;
@@ -98,6 +153,49 @@
   margin-bottom: 50px;
   color: white;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* View Toggle Buttons */
+.u-view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0 50px 0;
+}
+
+.u-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.u-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.u-toggle-btn-active {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #478ac9 !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Gallery Grid */

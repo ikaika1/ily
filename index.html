@@ -9,6 +9,33 @@
 <link rel="stylesheet" href="index.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script>
+      // Toggle Mobile Menu
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const btn = document.querySelector('.u-hamburger-btn');
+        
+        if (menu.classList.contains('show')) {
+          menu.classList.remove('show');
+          btn.querySelector('.nav-icon').textContent = '☰';
+        } else {
+          menu.classList.add('show');
+          btn.querySelector('.nav-icon').textContent = '✕';
+        }
+      }
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        const menu = document.getElementById('mobileMenu');
+        const btn = document.querySelector('.u-hamburger-btn');
+        
+        if (!menu.contains(e.target) && !btn.contains(e.target) && menu.classList.contains('show')) {
+          menu.classList.remove('show');
+          btn.querySelector('.nav-icon').textContent = '☰';
+        }
+      });
+      
+    </script>
     <meta name="generator" content="Nicepage 7.4.4, nicepage.com">
     
     
@@ -31,12 +58,29 @@
         
         <!-- Top Right Navigation Buttons -->
         <div class="u-top-nav-buttons">
-          <a href="gallery.html" class="u-nav-btn u-nav-btn-gallery">
+          <button class="u-nav-btn u-hamburger-btn" onclick="toggleMobileMenu()">
+            <span class="nav-icon">☰</span>
+            Menu
+          </button>
+
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="u-mobile-menu" id="mobileMenu">
+          <a href="index.html" class="u-mobile-menu-item">
+            <span class="nav-icon">🏠</span>
+            Home
+          </a>
+          <a href="gallery.html" class="u-mobile-menu-item">
             <span class="nav-icon">🖼️</span>
             Gallery
           </a>
-
+          <a href="https://note.com/ikaika562" class="u-mobile-menu-item" target="_blank">
+            <span class="nav-icon">📝</span>
+            Blog
+          </a>
         </div>
+        
         <img class="u-image u-image-default u-image-1" src="images/Fw0cPWHacAUQYFc.jpg" alt="ILY Validator Milady Character" title="ILY Validator - Milady Character Art" data-image-width="779" data-image-height="774">
         <div class="u-clearfix u-group-elements u-group-elements-1" href="#">
           <h2 class="u-text u-text-body-alt-color u-text-default u-text-2">Validator address</h2>
