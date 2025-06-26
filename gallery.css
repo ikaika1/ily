@@ -305,6 +305,7 @@
 @media (max-width: 768px) {
   .u-text-1 {
     font-size: 2rem;
+    margin-top: 40px;
   }
   
   .u-text-2 {
