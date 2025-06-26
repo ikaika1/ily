@@ -105,6 +105,14 @@
   cursor: pointer;
 }
 
+/* Hide default Nicepage navigation menu */
+.u-menu,
+.u-nav-container,
+.menu-collapse,
+.u-offcanvas {
+  display: none !important;
+}
+
 .u-section-1 .u-text-1 {
   margin: 12px 329px 0 auto;
 }
